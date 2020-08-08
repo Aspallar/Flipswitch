@@ -1,0 +1,71 @@
+.windowsswitch {
+    position: relative;
+    width: 90px;
+    display: inline-block;
+    user-select: none;
+    margin-right: 10px;
+}
+.windowsswitch-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.windowsswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #999999;
+    border-radius: 0px;
+}
+.windowsswitch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.windowsswitch-inner:before,
+.windowsswitch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 30px;
+    padding: 0;
+    line-height: 26px;
+    font-size: 14px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+.windowsswitch-inner:before {
+    content: '';
+    padding-left: 10px;
+    background-color: #2e8def;
+    color: #ffffff;
+}
+.windowsswitch-inner:after {
+    content: '';
+    padding-right: 10px;
+    background-color: #cccccc;
+    color: #333333;
+    text-align: right;
+}
+.windowsswitch-switch {
+    display: block;
+    width: 25px;
+    margin: 0px;
+    background: #000000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 65px;
+    transition: all 0.3s ease-in 0s;
+}
+.windowsswitch-checkbox:checked + .windowsswitch-label .windowsswitch-inner {
+    margin-left: 0;
+}
+.windowsswitch-checkbox:checked + .windowsswitch-label .windowsswitch-switch {
+    right: 0px;
+}

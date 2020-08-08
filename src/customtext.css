@@ -1,0 +1,74 @@
+.customtextswitch {
+    position: relative;
+    width: 200px;
+    user-select: none;
+    margin-bottom: 20px;
+}
+.customtextswitch-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.customtextswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+}
+.customtextswitch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.1s ease-in 0s;
+}
+.customtextswitch-inner:before,
+.customtextswitch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 24px;
+    padding: 0;
+    line-height: 24px;
+    font-size: 18px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.customtextswitch-inner:before {
+    content: attr(data-on);
+    padding-left: 10px;
+    background-color: #9774bd;
+    color: #ffffff;
+}
+.customtextswitch-inner:after {
+    content: attr(data-off);
+    padding-right: 10px;
+    background-color: #eeeeee;
+    color: #999999;
+    text-align: right;
+}
+.customtextswitch-switch {
+    display: block;
+    width: 31px;
+    margin: -3.5px;
+    background: #6b0a43;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 172px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    transition: all 0.1s ease-in 0s;
+}
+.customtextswitch-checkbox:checked
+    + .customtextswitch-label
+    .customtextswitch-inner {
+    margin-left: 0;
+}
+.customtextswitch-checkbox:checked
+    + .customtextswitch-label
+    .customtextswitch-switch {
+    right: 0px;
+}

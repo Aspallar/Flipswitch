@@ -1,0 +1,30 @@
+{
+  "name": "flipswitch",
+  "version": "1.0.0",
+  "description": "Flip switch web component",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aspallar/Flipswitch.git"
+  },
+  "keywords": [
+    "flipswitch",
+    "onoff",
+    "onoffswitch",
+    "component"
+  ],
+  "author": "Aspallar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aspallar/Flipswitch/issues"
+  },
+  "homepage": "https://github.com/Aspallar/Flipswitch#readme",
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "terser": "^5.0.0"
+  },
+  "dependencies": {}
+}
