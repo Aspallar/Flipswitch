@@ -15,12 +15,14 @@ class FlipswitchCheckbox extends HTMLInputElement {
         label.htmlFor = checkboxId;
         label.classList.add(classPrefix + '-label');
 
-        const onText = this.getAttribute('data-on');
-        const offText = this.getAttribute('data-off');
-        const innerSpan = document.createElement('span');
+        const dataOn = 'data-on',
+            dataOff = 'data-off',
+            onText = this.getAttribute(dataOn),
+            offText = this.getAttribute(dataOff),
+            innerSpan = document.createElement('span');
         innerSpan.classList.add(classPrefix + '-inner');
-        if (onText !== null) innerSpan.setAttribute('data-on', onText);
-        if (offText !== null) innerSpan.setAttribute('data-off', offText);
+        if (onText !== null) innerSpan.setAttribute(dataOn, onText);
+        if (offText !== null) innerSpan.setAttribute(dataOff, offText);
 
         const switchSpan = document.createElement('span');
         switchSpan.classList.add(classPrefix + '-switch');
