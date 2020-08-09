@@ -3,15 +3,23 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Custon Checkbox</title>
+        <title>Flip Switch Demo</title>
         <link rel="stylesheet" href="index.css" />
         <link rel="stylesheet" href="yesno.css" />
         <link rel="stylesheet" href="material.css" />
-        <link rel="stylesheet" href="windows.css" />
         <link rel="stylesheet" href="customtext.css" />
     </head>
     <body>
+        <p>
+            You can use
+            <a href="https://proto.io/freebies/onoff/">proto.io</a>
+            to design a flip switch.
+        </p>
         <h2>yesno.css</h2>
+        <div>
+            <button id="check-all" class="btn btn-1e">Check All</button>
+            <button id="check-none" class="btn btn-1e">Check None</button>
+        </div>
         <div id="results"></div>
         <div id="custom-elements" class="switch-group">
             <input id="foo-1" is="flip-switch" value="A" checked />
@@ -23,28 +31,55 @@
 
         <h2>material.css</h2>
         <div id="material-switches" class="switch-group">
-            <input is="flip-switch" data-class="materialswitch" />
-            <input is="flip-switch" data-class="materialswitch" checked />
-            <input is="flip-switch" data-class="materialswitch" />
-        </div>
-
-        <h2>windows.css</h2>
-        <div id="windows-switches" class="switch-group">
-            <input is="flip-switch" data-class="windowsswitch" />
-            <input is="flip-switch" data-class="windowsswitch" checked />
+            <input is="flip-switch" data-css-prefix="materialswitch" />
+            <input is="flip-switch" data-css-prefix="materialswitch" checked />
+            <input is="flip-switch" data-css-prefix="materialswitch" />
         </div>
 
         <h2>custontext.css</h2>
         <div id="customtext-switches" class="switch-group">
-            <input is="flip-switch" data-class="customtextswitch" data-on="I'm Active" data-off="Inactive" />
-            <input is="flip-switch" data-class="customtextswitch" data-on="United Kingdom" data-off="France" checked />
+            <input
+                is="flip-switch"
+                data-css-prefix="customtextswitch"
+                data-on="I'm Active"
+                data-off="Inactive"
+            />
+            <input
+                is="flip-switch"
+                data-css-prefix="customtextswitch"
+                data-on="United Kingdom"
+                data-off="France"
+                checked
+            />
+        </div>
+
+        <h2>material.css - extra styles</h2>
+        <style>
+            .foobar {
+                margin-right: -5px;
+                transform: translateY(20px) rotate(45deg);
+            }
+        </style>
+        <div id="material-switches" class="switch-group">
+            <input is="flip-switch" data-css-prefix="materialswitch" />
+            <input
+                is="flip-switch"
+                data-css-prefix="materialswitch"
+                data-class="foobar"
+                checked
+            />
+            <input
+                is="flip-switch"
+                data-css-prefix="materialswitch"
+                style="transform: translateY(40px);"
+            />
         </div>
 
         <script src="flipswitch.js"></script>
 
         <!--
             flipswitch.js is NOT dependent on jQuery it's just
-            used by the code below because I'm too lazy to write it in
+            used by the code in index.js because I'm too lazy to write it in
             vanilla js
         -->
         <script
@@ -52,21 +87,6 @@
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
             crossorigin="anonymous"
         ></script>
-
-        <script>
-            (function () {
-                var customElements = $('#custom-elements'),
-                    results = $('#results');
-                function displayCheckedValues() {
-                    var values = $.map(
-                        customElements.find('input:checked'),
-                        el => $(el).val()
-                    ).join(' - ');
-                    results.html(values);
-                }
-                customElements.change(displayCheckedValues);
-                displayCheckedValues();
-            })();
-        </script>
+        <script src="index.js"></script>
     </body>
 </html>

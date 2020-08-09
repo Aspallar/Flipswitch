@@ -1,6 +1,7 @@
 body {
     background-color: #343434;
     color: rgb(181, 182, 196);
+    font-family: 'Courier New', Courier, monospace;
 }
 .switch-group {
     margin-bottom: 40px;
@@ -12,4 +13,21 @@ body {
     background-color: #222222;
     text-align: center;
     color: #fff;
+}
+a {
+    color: wheat
+}
+button {
+    color: white;
+    font-weight: bold;
+    background-color: #008CBA;
+    margin-bottom: 5px;
+    padding: 5px;
+    border: 0;
+    cursor: pointer;
+    width: 8em;
+    height: 2.2em;
+}
+button:hover {
+    border: solid 1px white;
 }
