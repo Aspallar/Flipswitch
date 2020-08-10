@@ -3,10 +3,7 @@
         results = $('#results');
 
     function displayCheckedValues() {
-        var values = $.map(
-            customElements.find('input:checked'),
-            el => $(el).val()
-        ).join(' - ');
+        var values = $.map(customElements.find('input:checked'), el => $(el).val()).join(' - ');
         results.html(values);
     }
 

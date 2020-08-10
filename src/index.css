@@ -15,12 +15,12 @@ body {
     color: #fff;
 }
 a {
-    color: wheat
+    color: wheat;
 }
 button {
     color: white;
     font-weight: bold;
-    background-color: #008CBA;
+    background-color: #008cba;
     margin-bottom: 5px;
     padding: 5px;
     border: 0;

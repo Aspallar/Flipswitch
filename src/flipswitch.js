@@ -1,8 +1,7 @@
 class FlipswitchCheckbox extends HTMLInputElement {
     constructor() {
         super();
-        const classPrefix =
-            this.getAttribute('data-css-prefix') || 'onoffswitch';
+        const classPrefix = this.getAttribute('data-css-prefix') || 'onoffswitch';
         this.type = 'checkbox';
         this.classList.add(classPrefix + '-checkbox');
 

@@ -62,13 +62,9 @@
     border-radius: 10px;
     transition: all 0.1s ease-in 0s;
 }
-.customtextswitch-checkbox:checked
-    + .customtextswitch-label
-    .customtextswitch-inner {
+.customtextswitch-checkbox:checked + .customtextswitch-label .customtextswitch-inner {
     margin-left: 0;
 }
-.customtextswitch-checkbox:checked
-    + .customtextswitch-label
-    .customtextswitch-switch {
+.customtextswitch-checkbox:checked + .customtextswitch-label .customtextswitch-switch {
     right: 0px;
 }

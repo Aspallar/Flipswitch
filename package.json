@@ -24,6 +24,7 @@
   "homepage": "https://github.com/Aspallar/Flipswitch#readme",
   "devDependencies": {
     "eslint": "^7.6.0",
+    "prettier": "^2.0.5",
     "terser": "^5.0.0"
   },
   "dependencies": {}
