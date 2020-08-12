@@ -23,65 +23,85 @@
         <script defer src="index.js"></script>
     </head>
     <body>
-        <p>
-            You can use
-            <a href="https://proto.io/freebies/onoff/">proto.io</a>
-            to design a flip switch.
-        </p>
+        <section>
+            <p>
+                You can use
+                <a href="https://proto.io/freebies/onoff/">proto.io</a>
+                to design a flip switch.
+            </p>
+        </section>
 
-        <h2>yesno.css</h2>
-        <div>
-            <button id="check-all" class="btn btn-1e">Check All</button>
-            <button id="check-none" class="btn btn-1e">Check None</button>
-        </div>
-        <div id="results"></div>
-        <div id="custom-elements" class="switch-group">
-            <input id="foo-1" is="flip-switch" value="A" checked />
-            <input id="foo-2" is="flip-switch" value="B" checked />
-            <input id="foo-3" is="flip-switch" value="C" />
-            <input is="flip-switch" checked value="D" />
-            <input is="flip-switch" checked value="E" />
-        </div>
+        <section>
+            <h2>yesno.css</h2>
+            <div>
+                <button id="check-all" class="btn btn-1e">All yes</button>
+                <button id="check-none" class="btn btn-1e">All no</button>
+            </div>
+            <div id="custom-elements" class="questions switch-group">
+                <div id="results"></div>
+                <span><span>A</span> Do you eat chickens?</span>
+                <input id="foo-1" is="flip-switch" value="A" checked />
+                <span><span>B</span> Do your feet smell?</span>
+                <input id="foo-2" is="flip-switch" value="B" checked />
+                <span><span>C</span> Do you eat baboons?</span>
+                <input id="foo-3" is="flip-switch" value="C" />
+                <span><span>D</span> Do you eat elephants?</span>
+                <input is="flip-switch" checked value="D" />
+                <span><span>E</span> Do you have body lice?</span>
+                <input is="flip-switch" checked value="E" />
+            </div>
+        </section>
 
-        <h2>material.css</h2>
-        <div id="material-switches" class="switch-group">
-            <input is="flip-switch" data-css-prefix="materialswitch" />
-            <input is="flip-switch" data-css-prefix="materialswitch" checked />
-            <input is="flip-switch" data-css-prefix="materialswitch" />
-        </div>
+        <section>
+            <h2>material.css</h2>
+            <div id="material-switches" class="switch-group">
+                <input is="flip-switch" data-css-prefix="materialswitch" />
+                <input is="flip-switch" data-css-prefix="materialswitch" checked />
+                <input is="flip-switch" data-css-prefix="materialswitch" />
+            </div>
+        </section>
 
-        <h2>custontext.css</h2>
-        <div id="customtext-switches" class="switch-group">
-            <input
-                is="flip-switch"
-                data-css-prefix="customtextswitch"
-                data-on="I'm Active"
-                data-off="Inactive"
-            />
-            <input
-                is="flip-switch"
-                data-css-prefix="customtextswitch"
-                data-on="United Kingdom"
-                data-off="France"
-                checked
-            />
-        </div>
+        <section>
+            <h2>custontext.css</h2>
+            <div id="customtext-switches" class="switch-group">
+                <input
+                    is="flip-switch"
+                    data-css-prefix="customtextswitch"
+                    data-on="I'm Active"
+                    data-off="Inactive"
+                />
+                <input
+                    is="flip-switch"
+                    data-css-prefix="customtextswitch"
+                    data-on="United Kingdom"
+                    data-off="France"
+                    checked
+                />
+            </div>
+        </section>
 
-        <h2>material.css - extra styles</h2>
-        <style>
-            .foobar {
-                margin-right: -5px;
-                transform: translateY(20px) rotate(45deg);
-            }
-        </style>
-        <div id="material-switches" class="switch-group">
-            <input is="flip-switch" data-css-prefix="materialswitch" />
-            <input is="flip-switch" data-css-prefix="materialswitch" data-class="foobar" checked />
-            <input
-                is="flip-switch"
-                data-css-prefix="materialswitch"
-                style="transform: translateY(40px);"
-            />
-        </div>
+        <section>
+            <h2>material.css - extra styles</h2>
+            <style>
+                .foobar {
+                    margin-right: -5px;
+                    transform: translateY(20px) rotate(45deg);
+                }
+            </style>
+            <div id="material-switches" class="switch-group">
+                <input is="flip-switch" data-css-prefix="materialswitch" />
+                <input
+                    is="flip-switch"
+                    data-css-prefix="materialswitch"
+                    data-class="foobar"
+                    checked
+                />
+                <input
+                    is="flip-switch"
+                    data-css-prefix="materialswitch"
+                    style="transform: translateY(40px);"
+                />
+            </div>
+        </section>
     </body>
 </html>
